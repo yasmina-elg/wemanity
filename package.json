@@ -1,0 +1,19 @@
+{
+  "name": "wemanity",
+  "version": "1.0.0",
+  "description": "phonebook server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasmina-elg/wemanity.git"
+  },
+  "author": "Yasmina-elg for wemanity",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yasmina-elg/wemanity/issues"
+  },
+  "homepage": "https://github.com/yasmina-elg/wemanity#readme"
+}
