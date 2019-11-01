@@ -2,25 +2,22 @@
   "development": {
     "username": "postgres",
     "password": "root",
-    "database": "phonebook_development",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "database": "phonebook",
+    "host": "localhost",
+    "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "root",
     "database": "phonebook_test",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "host": "localhost",
+    "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": "root",
     "database": "phonebook_production",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "host": "localhost",
+    "dialect": "postgres"
   }
 }

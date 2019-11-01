@@ -3,7 +3,6 @@ import bodyParser from 'body-parser'
 import {systemRouter} from './routes/system'
 import cors from 'cors'
 import 'reflect-metadata'
-import morgan from 'morgan'
 
 
 export const createExpressApp = () => {
@@ -18,7 +17,6 @@ export const createExpressApp = () => {
   )
   // Middlewares
   app.use(bodyParser.urlencoded({ extended: false }))
-  app.use(morgan('dev'))
   app.use(bodyParser.json())
 
   // Routes
