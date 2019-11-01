@@ -1,6 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import {systemRouter} from './routes/system'
+import {EntriesRouter} from './routes/EntriesRouter'
 import cors from 'cors'
 import 'reflect-metadata'
 
@@ -21,6 +22,7 @@ export const createExpressApp = () => {
 
   // Routes
   app.use('/system', systemRouter())
+  app.use('/entries', EntriesRouter())
 
   return app
 }
