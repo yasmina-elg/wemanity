@@ -1,16 +1,15 @@
 import React from 'react'
+import EntrySummary from './EntrySummary'
 
 const EntryList = () => {
   return (
-    <div className="entry-list section">
-        <ul>
-            <li>Firstname, Lastname, phoneNumber</li>
-            <li>Firstname, Lastname, phoneNumber</li>
-            <li>Firstname, Lastname, phoneNumber</li>
-        </ul>
+    <div className="entry-list section center">
+        <EntrySummary/>
+        <EntrySummary/>
+        <EntrySummary/>
       
     </div>
   )
 }
 
-export const EntryList
+export default EntryList

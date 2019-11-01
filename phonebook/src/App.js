@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App" >
-          <Navbar/>
+          <Navbar />
           <Switch>
-            <Route path='/' component={Dashboard}/>
+            <Route path='/' component={Dashboard} />
           </Switch>
         </div>
       </BrowserRouter>
