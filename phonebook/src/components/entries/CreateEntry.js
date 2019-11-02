@@ -20,6 +20,7 @@ class CreateEntry extends Component {
         e.preventDefault()
         console.log(this.state)
         this.props.createEntry(this.state)
+        this.props.history.push('/')
     }
 
     render() {
