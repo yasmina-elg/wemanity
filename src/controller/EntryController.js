@@ -49,6 +49,7 @@ export const EntryController = {
         try {
             const entryId = req.params.id
             const { firstname, lastname, phoneNumber } = req.body
+            console.log('§§§§§§§§§!!!!!!',firstname, lastname, phoneNumber,'§§§§§§§§§!!!!!!')
             await models.entry.update(
                 {
                     firstname: firstname,

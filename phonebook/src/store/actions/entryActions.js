@@ -35,7 +35,11 @@ export const updateEntry = (id, params)=>{
         //async call db
         const entry = await axios({
             url: `${BACKEND_URL}entries/${id}`,
-            data: {...params},
+            data: {
+                firstname:params.firstname,
+                lastname: params.lastname,
+                phoneNumber: params.phoneNumber
+            },
             method: "patch",
         }).catch(e => {
             dispatch({type: 'UPDATE_ENTRY_ERROR', e})
