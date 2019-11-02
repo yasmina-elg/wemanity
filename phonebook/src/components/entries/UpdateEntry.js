@@ -20,7 +20,7 @@ class UpdateEntry extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         console.log(this.state)
-        this.props.updateEntry(this.props.entry.id, {...this.state})
+        this.props.updateEntry(this.props.entry.id, this.state)
         this.props.history.push('/')
     } 
 
@@ -62,7 +62,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        updateEntry: (entry) => dispatch(updateEntry(entry))
+        updateEntry: (id, entry) => dispatch(updateEntry(id, entry))
     }
 }
 
