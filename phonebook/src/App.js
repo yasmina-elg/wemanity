@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar'
 import Dashboard from './components/dashboard/Dashboard'
 import EntryDetails from './components/entries/EntryDetails'
 import CreateEntry from './components/entries/CreateEntry'
+import UpdateEntry from './components/entries/UpdateEntry'
 
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path='/' component={Dashboard} />
-            <Route exact path='/entries/:id' component={EntryDetails} />
+            <Route exact path='/entries/:id' component={UpdateEntry} />
             <Route exact path='/create' component={CreateEntry} />
           </Switch>
         </div>

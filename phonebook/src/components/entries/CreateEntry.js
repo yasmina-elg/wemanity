@@ -21,7 +21,7 @@ class CreateEntry extends Component {
         console.log(this.state)
         this.props.createEntry(this.state)
         this.props.history.push('/')
-    }
+    } 
 
     render() {
         return (

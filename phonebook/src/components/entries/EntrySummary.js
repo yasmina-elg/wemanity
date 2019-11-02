@@ -1,5 +1,5 @@
 import React from 'react'
-
+ 
 const EntrySummary = ({entry}) => {
     return (
         <div className="card z-depth-0 entry-summary" >
