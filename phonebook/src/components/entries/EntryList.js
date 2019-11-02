@@ -1,12 +1,14 @@
 import React from 'react'
 import EntrySummary from './EntrySummary'
 
-const EntryList = () => {
+const EntryList = ({entries}) => {
   return (
     <div className="entry-list section center">
-        <EntrySummary/>
-        <EntrySummary/>
-        <EntrySummary/>
+       { entries && entries.map(entry => {
+         return (
+           <EntrySummary entry={entry} key={entry.id} />
+         )
+       })}
       
     </div>
   )
