@@ -31,6 +31,7 @@ export const getAllEntries = ()=>{
 
 
 export const updateEntry = (id, params)=>{
+    console.log(params)
     return async (dispatch, getState)=>{
         //async call db
         const entry = await axios({
