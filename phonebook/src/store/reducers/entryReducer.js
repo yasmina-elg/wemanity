@@ -1,6 +1,6 @@
 const initState = {
     entries: []
-}
+} 
 
 const entryReducer = (state = initState, action) => {
     switch (action.type) {
