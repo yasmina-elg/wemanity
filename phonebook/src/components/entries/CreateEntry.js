@@ -38,7 +38,7 @@ class CreateEntry extends Component {
                     </div>
                     <div className="input-field" >
                         <label htmlFor="phoneNumber">Phone number</label>
-                        <input type="text" id="phoneNumber" pattern="/[^[+][0-9]{0,2}\s[0-9]{0,2}\s[0-9]{6,7}]+/" onChange={this.handleChange} />
+                        <input type="text" id="phoneNumber" pattern="^\+[0-9]{2}\s[0-9]{2}\s[0-9]{6,7}" onChange={this.handleChange} />
                     </div>
                     <div className="input-field" >
                         <button className="btn pink lighten-1 z-depth-0" >Create</button>
