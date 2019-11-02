@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import EntryList from '../entries/EntryList'
 import { connect } from 'react-redux'
+import { getAllEntries } from '../../store/actions/entryActions'
 
 class Dashboard extends Component {
+    componentDidMount() {
+        this.props.getAllEntries().then(entries => {
+            console.log(entries)
+        })
+    }
     render() {
 
         const { entries } = this.props
@@ -22,7 +28,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-
+    return {
+        getAllEntries: () => dispatch(getAllEntries())
+    }
 }
-
-export default connect(mapStateToProps)(Dashboard)
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
