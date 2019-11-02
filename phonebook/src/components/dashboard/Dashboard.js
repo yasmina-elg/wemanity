@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 class Dashboard extends Component {
     render() {
+        console.log(this.props)
         return (
             <div className="dashboard container">
                 <EntryList/>
@@ -12,4 +13,14 @@ class Dashboard extends Component {
     }
 }
 
-export default connect()(Dashboard)
+const mapStateToProps = (state) => {
+    return {
+        entries: state.entry.entries
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    
+}
+
+export default connect(mapStateToProps)(Dashboard)
