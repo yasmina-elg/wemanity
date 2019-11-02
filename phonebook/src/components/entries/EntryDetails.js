@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 const EntryDetails = (props) => {
     const id = props.match.params.id
@@ -14,4 +15,4 @@ const EntryDetails = (props) => {
     )
 }
 
-export default EntryDetails
+export default connect()(EntryDetails)
