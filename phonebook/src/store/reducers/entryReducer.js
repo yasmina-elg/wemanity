@@ -3,7 +3,7 @@ const initState = {
 }
 
 const entryReducer = (state = initState, action) => {
-    switch(action.type){
+    switch (action.type) {
         case 'CREATE_ENTRY':
             console.log('entry created ', action.entry)
             return state
