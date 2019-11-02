@@ -4,9 +4,13 @@ import { connect } from 'react-redux'
 import { getAllEntries } from '../../store/actions/entryActions'
 
 class Dashboard extends Component {
+    componentDidMount() {
+        this.props.getAllEntries().then(entries => {
+            console.log(entries)
+        })
+    }
     render() {
 
-        console.log(this.props)
         const { entries } = this.props
 
         return (

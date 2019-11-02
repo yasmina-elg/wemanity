@@ -12,6 +12,6 @@ const EntryList = ({entries}) => {
       
     </div>
   )
-}
+} 
 
 export default EntryList
