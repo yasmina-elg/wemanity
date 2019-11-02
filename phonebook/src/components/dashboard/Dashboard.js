@@ -4,10 +4,12 @@ import { connect } from 'react-redux'
 
 class Dashboard extends Component {
     render() {
-        console.log(this.props)
+
+        const { entries } = this.props
+
         return (
             <div className="dashboard container">
-                <EntryList/>
+                <EntryList entries={entries}/>
             </div>
         )
     }
@@ -20,7 +22,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    
+
 }
 
 export default connect(mapStateToProps)(Dashboard)
