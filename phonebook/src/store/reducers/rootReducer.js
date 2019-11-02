@@ -5,3 +5,5 @@ const rootReducer = combineReducers({
     entry: entryReducer
 })
 
+export default rootReducer
+
