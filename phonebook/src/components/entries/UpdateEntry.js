@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { updateEntry } from '../../store/actions/entryActions'
+import { updateEntry, getAllEntries } from '../../store/actions/entryActions'
 
 class UpdateEntry extends Component {
 
@@ -21,8 +21,17 @@ class UpdateEntry extends Component {
         e.preventDefault()
         console.log(this.state)
         this.props.updateEntry(this.props.entry.id, this.state)
+        this.props.getAllEntries()
         this.props.history.push('/')
     } 
+
+    componentDidMount(){
+        this.setState({
+            firstname: this.props.entry.firstname,
+            lastname: this.props.entry.lastname,
+            phoneNumber: this.props.entry.phoneNumber
+        })
+    }
 
     render() {
         console.log(this.props)
@@ -62,7 +71,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        updateEntry: (id, entry) => dispatch(updateEntry(id, entry))
+        updateEntry: (id, entry) => dispatch(updateEntry(id, entry)),
+        getAllEntries: () => dispatch(getAllEntries())
     }
 }
 
